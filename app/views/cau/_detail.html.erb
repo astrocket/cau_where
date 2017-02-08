@@ -1,0 +1,9 @@
+<div class="card information-card grey lighten-2">
+  <div class="card-content black-text">
+    <h2 class="center-align"><%= @cau.title %></h2>
+  </div>
+  <div class="card-action">
+    <%= link_to '맛집?', cau_index_path(:restaurant_id => @cau.id), class: 'btn waves-effect waves-light btn-large find-button' %>
+    <%= link_to '술집?', cau_index_path(:pub_id => @cau.id), class: 'btn waves-effect waves-light btn-large find-button' %>
+  </div>
+</div>

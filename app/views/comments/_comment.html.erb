@@ -1,0 +1,7 @@
+<div class="card-content white-text comment-list" id="comment_<%= comment.id %>">
+  <p class="card-title">ㄴ<%= comment.content %></p>
+  <span class="comment-option">
+    <%= comment.created_at ? comment.created_at.strftime('%m/%d') : comment.commentable.id %></br>
+    <%= link_to '<i class="material-icons md-light">delete</i>'.html_safe, ([comment.commentable, comment]), method: :delete, remote: true, data: {confirm: 'Are you sure?'} %>
+  </span>
+</div>

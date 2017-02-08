@@ -1,0 +1,3 @@
+$('.find-button').bind('ajax:success', function() {
+  $('#information').html("<%= escape_javascript render(partial: 'detail') %>");
+});

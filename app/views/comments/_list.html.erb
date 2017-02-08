@@ -1,0 +1,11 @@
+<div id="comments_list_<%= parent.id %>">
+  <% if parent.comments.size > 0 %>
+      <% parent.comments.each do |comment| %>
+          <%= render 'comments/comment', comment: comment %>
+      <% end %>
+  <% else %>
+      <div class="card-content white-text" id="nocomment_<%= parent.id %>">
+        현재 댓글이 없습니다.
+      </div>
+  <% end %>
+</div>

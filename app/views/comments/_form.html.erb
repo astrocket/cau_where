@@ -1,0 +1,16 @@
+<div class="card-action comment-card" id="comments_form_<%= comment.commentable_id %>">
+  <%= form_for([comment.commentable, comment], :remote => true) do |f| %>
+      <div class="input-field">
+        <%= f.label :name, class: 'active' %>
+        <%= f.text_field :name, :required => true, class: 'form-control', placeholder: '이름', maxlength: '25' %>
+      </div>
+      <div class="input-field">
+        <%= f.label :content, class: 'active' %>
+        <%= f.text_field :content, :required => true, class: 'form-control', placeholder: '이집 최고 ~' %>
+      </div>
+      <div class="actions">
+        <%= f.submit '댓글달기', class: 'btn waves-effect waves-light' %>
+      </div>
+  <% end %>
+</div>
+<div class="clear"></div>

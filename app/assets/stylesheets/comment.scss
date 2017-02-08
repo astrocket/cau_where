@@ -1,0 +1,32 @@
+// Place all the styles related to the comment controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comment-card {
+
+}
+
+.comment-card .card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-card .card-content .card-title {
+  overflow-wrap: break-word;
+  width: calc(100% - 100px);
+}
+
+.comment-card .actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.comment-card .comment-list {
+  .material-icons.md-light { color: rgba(255, 255, 255, 1); };
+}
+
+.comment-card .comment-list .comment-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

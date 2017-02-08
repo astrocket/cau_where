@@ -1,0 +1,7 @@
+<% if @comment.errors.size == 0 %>
+$('<%=j render @comment %>').appendTo($("#comments_list_<%= @comment.commentable_id %>")).hide().fadeIn('fast');
+$("#nocomment_<%= @comment.commentable_id %>").fadeOut('fast');
+$("#comments_form_<%= @comment.commentable_id %>").find("input[type=text], textarea").val("");
+<% else %>
+alert("내용을 입력해야 댓글을 달 수 있습니다.");
+<% end %>
