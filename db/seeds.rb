@@ -10,8 +10,11 @@ restaurant_list = %w(
 #싸움의고수 흑수돈 엉터리생고기 숯부래 해랑 가네미 더진국 도스마스 도스타코스 내찜닭 치즈가사랑하는찜닭 경대컵밥 알촌 지지고 니뽕내뽕
 #홍수계 등촌칼국수 청기와 순대나라
 
+Shop.create(id: 1, shop_type: 'general')
+Shop.create(id: 2, shop_type: 'commercial')
+
 restaurant_list.each do |title|
-  Restaurant.create(title: title)
+  Restaurant.create(title: title, shop_id: 1)
 end
 
 pub_list = %w(
@@ -24,5 +27,5 @@ pub_list = %w(
 #옹골진 잠꾸러기 장독대 캐빈 프렌즈 대왕대포 살롱702 모라비어
 
 pub_list.each do |title|
-  Pub.create(title: title)
+  Pub.create(title: title, shop_id: 1)
 end

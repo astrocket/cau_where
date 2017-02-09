@@ -5,8 +5,23 @@ class CauController < ApplicationController
       @cau = Restaurant.where('id != ?', params[:restaurant_id]).sample
     elsif params[:pub_id]
       @cau = Pub.where('id != ?', params[:pub_id]).sample
+    elsif params[:search]
+      @cau = (Pub.search(params[:search]) + Restaurant.search(params[:search])).sample
     else
-      @cau = Restaurant.order('RANDOM()').first
+      @cau = Restaurant.order('RAND()').first
+    end
+  end
+
+  def autocomplete
+    @shop_list = (
+      Pub.order(:title).search(params[:term]) +
+      Restaurant.order(:title).search(params[:term])
+    )
+    respond_to do |format|
+      format.html
+      format.json {
+        render json: @shop_list.map(&:title).to_json
+      }
     end
   end
 
@@ -21,6 +36,12 @@ class CauController < ApplicationController
     else
       render 'index'
     end
+  end
+
+  private
+
+  def find_shop
+
   end
 
 end

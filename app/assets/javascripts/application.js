@@ -11,7 +11,19 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require turbolinks
 //= require materialize-sprockets
 //= require_tree .
+
+var ready;
+ready = (function() {
+    $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
+    $("#search").autocomplete({
+        source: '/cau/autocomplete.json'
+    });
+});
+
+$(document).ready(ready);
+$(document).on('page:load', ready);

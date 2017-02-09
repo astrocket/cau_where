@@ -11,6 +11,9 @@ gem 'rails_12factor', group: :production
 
 gem 'table_print'
 gem 'materialize-sass'
+#gem 'sunspot_rails'
+#gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
+gem 'jquery-ui-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'

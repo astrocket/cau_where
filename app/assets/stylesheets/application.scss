@@ -1,8 +1,17 @@
 // 아래 두 줄이 있어야 나머지 scss 들이 포함된다
+// *= require jquery-ui/datepicker
 // *= require_tree .
 // *= require_self
 
 @import "materialize";
+
+header .navbar-fixed {
+  margin-bottom: 10px;
+}
+
+header .navbar-fixed nav {
+  opacity: 0.5;
+}
 
 body {
   display: flex;

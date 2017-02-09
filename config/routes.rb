@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :cau
+  resources :cau do
+    collection do
+      get 'autocomplete'
+      get 'find'
+    end
+  end
 
   resources :restaurants do
     resources :comments
