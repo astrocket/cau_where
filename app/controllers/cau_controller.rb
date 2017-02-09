@@ -6,7 +6,7 @@ class CauController < ApplicationController
     elsif params[:pub_id]
       @cau = Pub.where('id != ?', params[:pub_id]).sample
     else
-      @cau = Restaurant.order('RAND()').first
+      @cau = Restaurant.order('RANDOM()').first
     end
   end
 
