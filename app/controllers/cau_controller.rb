@@ -19,9 +19,7 @@ class CauController < ApplicationController
     )
     respond_to do |format|
       format.html
-      format.json {
-        render json: @shop_list.map(&:title).to_json
-      }
+      format.json
     end
   end
 

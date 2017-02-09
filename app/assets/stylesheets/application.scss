@@ -30,5 +30,8 @@ footer .footer-copyright .container {
 }
 
 footer .footer-copyright .container .lionlogo>img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 20px;
 }
