@@ -1,4 +1,4 @@
-<div id="comments_list_<%= parent.id %>">
+<div class="comment-list" id="comments_list_<%= parent.id %>">
   <% if parent.comments.size > 0 %>
       <% parent.comments.each do |comment| %>
           <%= render 'comments/comment', comment: comment %>

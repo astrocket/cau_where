@@ -1,9 +1,8 @@
 <div class="container" style="align:center;">
-  <div id="information">
+  <div id="ajax-information">
     <%= render 'detail' %>
   </div>
-  <div class="card comment-card blue-grey darken-1">
-    <%= render '/comments/form', comment: @cau.comments.new %>
-    <%= render '/comments/list', parent: @cau %>
+  <div class="card comment-card blue-grey darken-1" id="ajax-comments">
+    <%= render 'comments' %>
   </div>
 </div>

@@ -16,16 +16,21 @@
   width: calc(100% - 100px);
 }
 
+.comment-card .comment-list {
+  overflow-y: scroll;
+  max-height: 130px;
+}
+
 .comment-card .actions {
   display: flex;
   justify-content: flex-end;
 }
 
-.comment-card .comment-list {
+.comment-card .comment-list-unit {
   .material-icons.md-light { color: rgba(255, 255, 255, 1); };
 }
 
-.comment-card .comment-list .comment-option {
+.comment-card .comment-list-unit .comment-option {
   display: flex;
   justify-content: center;
   align-items: center;
