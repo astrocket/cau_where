@@ -1,0 +1,25 @@
+// 아래 두 줄이 있어야 나머지 scss 들이 포함된다
+// *= require_tree .
+// *= require_self
+
+@import "materialize";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer .footer-copyright .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .footer-copyright .container .lionlogo>img {
+  height: 20px;
+}

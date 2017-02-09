@@ -10,6 +10,7 @@ gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 
 gem 'table_print'
+gem 'materialize-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'

@@ -12,9 +12,9 @@
 
 * Combining two different models through one controller
 
-### Things I have not covered yet:
-
 * Mobile floating menu for Chatting/Contact options
+
+### Things I have not covered yet:
 
 * Search bar with auto complete functionality. (Name / Like counts / Coupon)
 
