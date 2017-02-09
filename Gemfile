@@ -8,6 +8,7 @@ end
 # for heroku deploy
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
+
 gem 'table_print'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
