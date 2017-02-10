@@ -2,11 +2,11 @@
   <nav class="teal">
     <div class="nav-wrapper">
       <%= form_for cau_index_path, method: :get do %>
-          <div class="input-field">
+          <div class="input-field search-shops">
             <input id="search" type="search" name="search" required="true">
             <label class="label-icon" for="search"><i class="material-icons">search</i></label>
             <i class="material-icons">close</i>
-            <div id="search-results"></div>
+            <div class="results" id="search-results"></div>
           </div>
       <% end %>
     </div>

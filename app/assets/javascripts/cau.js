@@ -13,13 +13,13 @@ app.Cau.prototype = {
             })
             .autocomplete('instance')._renderItem = $.proxy(this._render, this);
     },
-    _render: function (ul, item) {
+    _render: function (div, item) {
         var markup = [
-            item.title
+            '<a href="'+ item.url +'">' + item.title + '</a>'
         ];
-        return $('<a href="'+ item.url +'">')
+        return $('<li>')
             .append(markup.join(''))
-            .appendTo('#search-results');
+            .appendTo(div);
     },
     _select: function (e, ui) {
         this._input.val(ui.item.title + ' - ' + ui.item.author);
