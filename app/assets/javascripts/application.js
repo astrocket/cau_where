@@ -16,3 +16,24 @@
 //= require turbolinks
 //= require materialize-sprockets
 //= require_tree .
+
+var ready;
+ready = (function() {
+    $("#search").autocomplete({
+        source: '/cau/autocomplete',
+        appendTo: '#search-results'
+    })
+    .autocomplete('instance')._renderItem = function (ul, item) {
+        var markup = [
+            '<a href="'+ item.url +'" data-turbolinks="false">' + item.title + '</a>'
+        ];
+        console.log(item);
+        return $('<li>')
+            .append(markup.join(''))
+            .appendTo(ul);
+    };
+
+});
+
+$(document).ready(ready);
+$(document).on('page:load', ready);

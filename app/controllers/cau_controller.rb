@@ -7,9 +7,17 @@ class CauController < ApplicationController
       @cau = Pub.where('id != ?', params[:pub_id]).sample
     elsif params[:search]
       @cau = (Pub.search(params[:search]) + Restaurant.search(params[:search])).sample
+      if @cau.nil?
+        flash[:notice] = params[:search]
+        render 'new'
+      end
     else
       @cau = Restaurant.order('RAND()').first
     end
+  end
+
+  def new
+
   end
 
   def autocomplete
