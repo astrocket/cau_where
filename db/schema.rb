@@ -38,9 +38,9 @@ ActiveRecord::Schema.define(version: 20170209075701) do
   end
 
   create_table "shops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "shop_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "shop_type",  default: "general"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
 end

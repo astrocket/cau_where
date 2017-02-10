@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :cau do
     collection do
       get 'autocomplete'

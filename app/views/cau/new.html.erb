@@ -1,1 +1,13 @@
-<h2><%= flash[:notice] %></h2>
+<div class="container">
+  <h3><%= flash[:notice] %> 새로 등록하기</h3>
+
+  <%= form_for (@pub) do |f| %>
+      <%= f.text_field :title, value: flash[:notice] %>
+      <%= f.button '술집등록하기' %>
+  <% end %>
+
+  <%= form_for (@restaurant) do |f| %>
+      <%= f.text_field :title, value: flash[:notice] %>
+      <%= f.button '맛집등록하기' %>
+  <% end %>
+</div>

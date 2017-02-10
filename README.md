@@ -14,11 +14,11 @@
 
 * Mobile floating menu for Chatting/Contact options
 
-### Things I have not covered yet:
-
 * Search bar with auto complete functionality. (Name / Like counts / Coupon)
 
 * Right to go add form if no data found
+
+### Things I have not covered yet:
 
 * 'Like' action for comments and pub/rest ( also sorting based on it )
 

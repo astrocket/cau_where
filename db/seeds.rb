@@ -2,7 +2,7 @@
 Shop.create(id: 1, shop_type: 'general')
 Shop.create(id: 2, shop_type: 'commercial')
 
-restaurant_list = %w(
+general_restaurant_list = %w(
     뚝배기스파게티
     육쌈냉면
     맥도날드
@@ -11,12 +11,13 @@ restaurant_list = %w(
     홍수계 등촌칼국수 청기와 순대나라
 )
 
+general_shop = Shop.find(1)
 
-restaurant_list.each do |title|
-  Restaurant.create(title: title, shop_id: 1)
+general_restaurant_list.each do |title|
+  general_shop.restaurants.create(title: title)
 end
 
-pub_list = %w(
+general_pub_list = %w(
     레드락
     봉구비어
     삼거리포차
@@ -24,7 +25,6 @@ pub_list = %w(
     옹골진 잠꾸러기 장독대 캐빈 프렌즈 대왕대포 살롱702 모라비어
 )
 
-
-pub_list.each do |title|
-  Pub.create(title: title, shop_id: 1)
+general_pub_list.each do |title|
+  general_shop.pubs.create(title: title)
 end

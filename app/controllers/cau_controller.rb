@@ -8,11 +8,14 @@ class CauController < ApplicationController
     elsif params[:search]
       @cau = (Pub.search(params[:search]) + Restaurant.search(params[:search])).sample
       if @cau.nil?
+        @pub = Pub.new
+        @restaurant = Restaurant.new
         flash[:notice] = params[:search]
         render 'new'
       end
     else
       @cau = Restaurant.order('RAND()').first
+      flash[:error] = '에러'
     end
   end
 
@@ -22,8 +25,8 @@ class CauController < ApplicationController
 
   def autocomplete
     @shop_list = (
-      Pub.order(:title).search(params[:term]) +
-      Restaurant.order(:title).search(params[:term])
+    Pub.order(:title).search(params[:term]) +
+        Restaurant.order(:title).search(params[:term])
     )
     respond_to do |format|
       format.html
@@ -45,9 +48,5 @@ class CauController < ApplicationController
   end
 
   private
-
-  def find_shop
-
-  end
 
 end

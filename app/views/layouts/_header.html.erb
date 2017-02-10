@@ -1,14 +1,14 @@
 <div class="navbar-fixed">
   <nav class="teal">
     <div class="nav-wrapper">
-      <%= form_for cau_index_path, method: :get do %>
+      <form action="/cau" accept-charset="UTF-8" method="GET">
           <div class="input-field search-shops">
             <input id="search" type="search" name="search" required="true">
             <label class="label-icon" for="search"><i class="material-icons">search</i></label>
             <i class="material-icons">close</i>
             <div class="results" id="search-results"></div>
           </div>
-      <% end %>
+      </form>
     </div>
   </nav>
 </div>
